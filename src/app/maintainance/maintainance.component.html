@@ -1,0 +1,90 @@
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+</head>
+
+
+<div class="container">
+    <br/><br/>
+    <div class="row">
+        <div class="col-sm">
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="assets/Images/aprt12.jpg">
+        <div class="card-body">
+          <h5 class="card-title">TOTAL RESIDENTS</h5>
+          <p class="card-text">{{payments.length}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm">
+
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="assets/Images/aprt14.jpg">
+        <div class="card-body">
+          <h5 class="card-title">TOTAL PAID</h5>
+          <p class="card-text"></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm">
+
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="assets/Images/aprt13.jpg">
+        <div class="card-body">
+          <h5 class="card-title">TOTAL UNPAID</h5>
+          <p class="card-text"></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm">
+
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="assets/Images/aprt15.jpg">
+        <div class="card-body">
+          <h5 class="card-title"><b>TOTAL AMOUNT </b></h5>
+          
+          <p class="card-text"><b> 50000.00</b></p>
+        </div>
+      </div>
+      </div>
+    </div>
+    <br/><br/>
+    
+    <div class="row">
+      <div class="col-sm">
+  <div *ngIf=payments>
+  <table class="table table-bordered table-striped table-hover table-sm text-center">
+  <thead>
+  
+  <tr class="bg-info text-white">
+  
+  <th>NAME</th>
+  <th>APARTMENT NO.</th>
+  <th>MOBILE</th>
+  <th>PAYMENTSTATUS</th>
+  
+  <th>ACTIONS</th>
+  
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let payment of payments">
+  
+   
+    <td>{{payment.resident.residentName }}</td>
+    <td>{{payment.resident.apartment.apartmentId }}</td>
+    <td>{{payment.resident.mobile }}</td>
+
+    <td>{{payment.paymentStatus  }}</td>
+  
+    <td>MESSAGE</td>
+    
+  </tr>
+  </tbody>
+  
+  </table>
+  </div>
+  </div>
+
+</div>
+  </div>

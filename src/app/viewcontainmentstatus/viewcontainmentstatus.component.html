@@ -1,0 +1,38 @@
+<app-header></app-header>
+
+<body>
+<div class="container">
+    <div class="frame">
+        
+<form class="text-center border border-light p-5"   >
+
+    <p class="h4 mb-4 " style="color:rgb(229, 240, 240)"><b>CHECK VISITOR STATUS</b></p>
+
+           
+        
+            <!-- Last name -->
+    <input type="text" name="location" [(ngModel)]='location' id="defaultRegisterFormLastName" required
+     minlength=2  class="form-control mb-4" placeholder="Enter the location from where visitor is coming">
+        
+    <!-- E-mail -->
+
+    <!-- Password 
+    <input type="number" name="resident" [(ngModel)]='complaint.resident.residentId' id="defaultRegisterFormPassword" class="form-control mb-4" placeholder="Resident id" aria-describedby="defaultRegisterFormPasswordHelpBlock">
+    -->
+   
+
+   
+
+    <!-- Sign up button -->
+    <button class="btn btn my-4 btn-block" type="submit" style="background-color: rgb(10, 10, 10);color:rgb(248, 241, 241);" (click) ="check()" ><b>View Status</b></button>
+
+    
+
+    <!-- Terms of service -->
+   
+</form>
+
+</div>
+</div>
+</body>
+<!-- Default form register -->

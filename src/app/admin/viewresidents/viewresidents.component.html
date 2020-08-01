@@ -1,0 +1,36 @@
+<h1 style="text-align: center;color: sienna;"><b>Residents List</b></h1>
+
+<div class="container">
+    
+  <table class="table table-bordered table-striped table-hover table-sm text-center" id="tableWithBgImage">
+  <thead>
+  
+  <tr style="background-color: orange; color: black;">
+  
+  <th>RESIDENT NAME</th>
+  <th>APARTMENT NAME</th>
+  <th>MOBILE</th>
+  <th>GENDER</th>
+  
+  <th>LOGINID</th>
+  
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let resident of residents" style="background-color:navajowhite; color: black;">
+  
+   
+    <td>{{resident.residentName }}</td>
+    <td>{{resident.apartment.apartmentName }}</td>
+    <td>{{resident.mobile }}</td>
+
+    <td>{{resident.gender  }}</td>
+  
+    <td>{{resident.loginId}}</td>
+    
+  </tr>
+  </tbody>
+  
+  </table>
+  </div>
+ 

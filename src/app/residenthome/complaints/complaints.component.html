@@ -1,0 +1,42 @@
+<html>
+<head>
+    </head>
+<body>
+<br><br><br>
+<!-- Default form register -->
+<div class="container">
+    <div class="frame">
+        
+<form class="text-center border border-light p-5" action="#!" #complaintForm="ngForm" (ngSubmit)="registerComplaint(complaintForm.value)" >
+
+    <p class="h4 mb-4 " style="color:teal">Complaint</p>
+
+           
+        
+            <!-- Last name -->
+    <input type="text" name="complaintmessage" [(ngModel)]='complaint.complaintmessage' #complaintmessage="ngModel" id="defaultRegisterFormLastName" required
+     minlength=4  class="form-control mb-4" placeholder="Enter your complaint">
+        
+    <!-- E-mail -->
+
+    <!-- Password 
+    <input type="number" name="resident" [(ngModel)]='complaint.resident.residentId' id="defaultRegisterFormPassword" class="form-control mb-4" placeholder="Resident id" aria-describedby="defaultRegisterFormPasswordHelpBlock">
+    -->
+   
+
+   
+
+    <!-- Sign up button -->
+    <button class="btn btn my-4 btn-block" type="submit" style="background-color: rgb(0, 109, 128);color:white;" ><b>Send Complaint</b></button>
+
+    
+
+    <!-- Terms of service -->
+   
+</form>
+
+</div>
+</div>
+<!-- Default form register -->
+</body>
+</html>

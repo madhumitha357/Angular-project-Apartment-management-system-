@@ -1,0 +1,38 @@
+<br/><br/>
+<body>
+<div class="container">
+    
+  <table class="table table-bordered table-danger table-hover table-sm text-center" id="tableWithBgImage">
+  <thead>
+  
+  <tr style="color: white;background: purple;">
+     <th>RESIDENT NAME</th>
+    <th>AMENITY</th>
+
+  <th>SLOT</th>
+  <th>CHARGE</th>
+  <th>DATE</th>
+
+  
+  
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let booking of bookings" style="color: purple;">
+  
+    <td>{{booking.resident.residentName}}</td>
+
+    <td>{{booking.amenity.amenityName}}</td>
+    <td>{{booking.slot.slotName }}</td>
+
+    <td>{{booking.amenity.charge  }}</td>
+    <td>{{booking.date |date: 'dd-MMMM-yy hh:mm:ss'}}</td>
+
+  
+    
+  </tr>
+  </tbody>
+  
+  </table>
+  </div>
+</body>

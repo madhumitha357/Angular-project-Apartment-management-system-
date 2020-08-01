@@ -1,0 +1,126 @@
+<!--<nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: blanchedalmond; color :  black;">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="Home" style="color: black;">DASHBOARD<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="viewresidents()" style="color: black;">VIEW RESIDENTS</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" (click)="viewpayments()" style="color: black;">MAINTENANCE</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="aboutus" style="color: black;">VIEW REQUESTS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="contact" style="color: black;">COMPLAINTS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href='#' style="color: black;">NOTICE BOARD</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="login" style="color: black;">LOGOUT</a>
+        </li>
+      </ul>
+    </div>
+
+   
+
+   
+  </nav>
+<router-outlet></router-outlet>
+  <div class="container">
+    <br/><br/>
+    
+<div *ngIf=residents>
+<table class="table table-bordered table-striped table-hover table-sm text-center">
+<thead>
+
+<tr class="bg-info text-white">
+<th>EMPID</th>
+<th>EMPNAME</th>
+<th>GENDER</th>
+
+<th>MOBILE</th>
+
+</tr>
+</thead>
+<tbody>
+  <tr *ngFor="let resident of residents">
+
+    <td>{{resident.residentId}}</td>
+    <td>{{resident.residentName  }}</td>
+    <td>{{resident.gender }}</td>
+   
+    <td>{{resident.mobile }}</td>
+    
+</tr>
+</tbody>
+
+</table>
+</div>
+</div>
+<div class="container">
+  <br/><br/>
+  
+<div *ngIf=payments>
+<table class="table table-bordered table-striped table-hover table-sm text-center">
+<thead>
+
+<tr class="bg-info text-white">
+<th>PAYMENTID</th>
+
+<th>NAME</th>
+<th>PAYMENTSTATUS</th>
+<th>DATE</th>
+<th>DATE</th>
+
+</tr>
+</thead>
+<tbody>
+<tr *ngFor="let payment of payments">
+
+  <td>{{payment.paymenttId}}</td>
+  <td>{{payment.resident.residentName }}</td>
+  <td>{{payment.paymentStatus  }}</td>
+
+  <td>{{payment.paymentDate }}</td>
+  
+</tr>
+</tbody>
+
+</table>
+</div>
+</div>-->
+
+<div class="d-flex" id="wrapper">
+  <!-- Sidebar -->
+  <div class="bg-light border-right" id="sidebar-wrapper">
+    <div class="sidebar-heading lge" style="color: white;" >ADMIN </div>
+    <div class="list-group list-group-flush">
+      <a routerLink = "/admin/viewresidents" style="color: white;" class="list-group-item list-group-item-action lge"><b>View Residents</b></a>
+      <a routerLink="/admin/maintenance" style="color: white;" class="list-group-item list-group-item-action lge"><b>Monthly Maintainance</b></a>
+      <a routerLink = "/admin/viewcomplaints" style="color: white;" class="list-group-item list-group-item-action lge"><b>View complaints</b></a>
+      <a routerLink = "/admin/viewrequests" style="color: white;" class="list-group-item list-group-item-action lge"><b>Requests</b></a>
+      <a href="#"  style="color: white;" class="list-group-item list-group-item-action bg-light lge"><b>Logout</b></a>
+    </div>
+  </div>
+  <!-- /#sidebar-wrapper -->
+  <!-- Page Content -->
+  <div id="page-content-wrapper">
+    
+    <div class="container-fluid">
+      <router-outlet></router-outlet>
+
+
+      </div>
+  </div>
+  <!-- /#page-content-wrapper -->
+</div>
+<!-- /#wrapper -->

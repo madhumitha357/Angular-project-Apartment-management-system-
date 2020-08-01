@@ -1,0 +1,29 @@
+<h1 style="text-align: center;color: crimson;"><b>Complaint List</b></h1>
+
+<div class="container">
+    
+  <table class="table table-bordered table-striped table-hover table-sm text-center" id="tableWithBgImage">
+  <thead>
+  
+  <tr style="background-color: lightseagreen;color: black;">
+  
+  <th>RESIDENT NAME</th>
+  <th>COMPLAINT</th>
+  
+  
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let complaint of complaints" style="background-color: darkslategrey; color: white;"> 
+  
+    <td>{{complaint.resident.residentName }}</td>
+
+    <td>{{complaint.complaintmessage }}</td>
+    
+    
+  </tr>
+  </tbody>
+  
+  </table>
+  </div>
+ 

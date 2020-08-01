@@ -1,0 +1,52 @@
+<html>
+<head>
+    </head>
+<body>
+<br><br><br>
+<!-- Default form register -->
+<div class="container">
+    <div class="frame">
+        
+<form class="text-center border border-light p-5" action="#!" #bookingForm="ngForm" (ngSubmit)="book(bookingForm.value)" >
+
+    <p class="h4 mb-4 " style="color:floralwhite">Book Here</p>
+
+           
+        
+    <select type ="number" name="amenity" class="form-control" placeholder="Amenity" [(ngModel)]='booking.amenity.amenityId'><br/>
+        <option value="" selected disabled>Please select amenity</option>  
+        <option [ngValue]="amenity.amenityId" *ngFor="let amenity of amenities">{{amenity.amenityName}}</option>
+    </select><br/>
+
+            <input type="date" name="date" [(ngModel)]='booking.date'  #date="ngModel" id="defaultRegisterFormLastName" required
+             class="form-control mb-4" placeholder="Select date"><br/>
+
+             <select type ="number" name="slot" class="form-control" placeholder="Slot" [(ngModel)]='booking.slot.slotId'><br/>
+                <option value="" selected disabled>Please select slot</option>  
+                <option [ngValue]="slot.slotId" *ngFor="let slot of slots">{{slot.slotName}}</option>
+            </select><br/>
+              <!--<input type="number" name="resident" [(ngModel)]='booking.resident.residentId' id="defaultRegisterFormPassword" class="form-control mb-4" placeholder="Resident id" aria-describedby="defaultRegisterFormPasswordHelpBlock">
+            
+               Sign up button -->
+              <button class="btn btn-info my-4 btn-block" type="submit">Submit</button>
+              <div *ngIf=booking> 
+                <button class="btn btn-info my-4 btn-block" (click)="getLastBooking()">Please Click Here</button>
+
+
+              </div>
+
+
+  
+              
+            
+
+    <!-- Terms of service -->
+   
+</form>
+
+
+</div>
+</div>
+<!-- Default form register -->
+</body>
+</html>

@@ -1,0 +1,36 @@
+
+<!--add this code in registration.component.html-->
+<app-header></app-header>
+
+<body>
+
+  <div class="container">
+      <div class="frame">
+      
+          
+  <form class="text-center border border-light p-5" #requestForm="ngForm" (ngSubmit)="register(requestForm.value)">
+  
+      <p class="h4 mb-4 " style="color:floralwhite">Contact Form</p>
+  
+              
+      <input type="text"  name="firstName" [(ngModel)]='request.firstName'  
+      maxlength=10 minlength=4  required
+     class="form-control mb-4" placeholder="Enter First name">
+      
+            
+      <input type="text" name="lastName"  [(ngModel)]='request.lastName' class="form-control mb-4" placeholder="Enter Last name">
+     
+  
+      <input type="text"  name="email" [(ngModel)]='request.email'  id="defaultRegisterFormEmail" required
+     class="form-control mb-4" placeholder="Email">
+     
+
+
+    <textarea id="subject" name="subject" [(ngModel)]='request.subject' placeholder="Write subject.." class="form-control mb-4" style="height:200px ; width: 200px;"></textarea>
+
+    <button type="submit" class="form-control mb-4"  style="background-color:grey;color: white;" value="Submit">Submit</button>
+  </form>
+</div>
+</div>
+
+</body>

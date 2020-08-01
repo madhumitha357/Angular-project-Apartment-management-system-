@@ -1,0 +1,31 @@
+
+<body>
+
+    <div class="container">
+        <div class="frame">
+        
+            
+    <form class="text-center border border-light p-5" #mailForm="ngForm" (ngSubmit)="register(mailForm.value)">
+    
+        <p class="h4 mb-4 " style="color:floralwhite"><b>Mail</b></p>
+    
+                
+        <input type="text"  name="to" [(ngModel)]='mail.to'  
+        required
+       class="form-control mb-4" placeholder="Enter to address">
+        
+              
+        <input type="text" name="sub"  [(ngModel)]='mail.sub' class="form-control mb-4" placeholder="Enter subject">
+       
+    
+        <input type="text"  name="msg" [(ngModel)]='mail.msg'  id="defaultRegisterFormEmail" required
+       class="form-control mb-4" placeholder="enter msg">
+       
+  
+  
+       <button type="submit" class="form-control mb-4"  style="background-color:rgb(5, 16, 46);color: white;" value="Submit">Submit</button>
+    </form>
+  </div>
+  </div>
+  
+  </body>

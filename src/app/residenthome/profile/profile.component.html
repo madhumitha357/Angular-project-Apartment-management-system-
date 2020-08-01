@@ -1,0 +1,188 @@
+<!--<p>profile works!</p>
+<h1 style="text-align: center;color: sienna;"><b>My Profile</b></h1>
+
+<div class="container">
+    
+  <table class="table table-bordered table-striped table-hover table-sm text-center" id="tableWithBgImage">
+  <thead>
+  
+  <tr style="background-color: orange; color: black;">
+  
+  <th>RESIDENT NAME</th>
+  
+  
+  <th>APARTMENT NAME</th>
+  <th>MOBILE</th>
+  <th>GENDER</th>
+  
+  <th>LOGINID</th>
+  
+  </tr>
+  </thead>
+  <tbody>
+  <tr style="background-color:navajowhite; color: black;">
+  
+   
+    <td>{{resident.residentName }}</td>
+    <td>{{resident.apartment.apartmentName }}</td>
+    <td>{{resident.mobile }}</td>
+
+    <td>{{resident.gender  }}</td>
+  
+    <td>{{resident.loginId}}</td>
+    
+  </tr>
+  </tbody>
+  
+  </table>
+  </div>
+-->
+<head>
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+
+</head>
+<!--<body>
+<br/><br/>
+<div class="container">
+
+ 
+    <div class ="row">
+    <div class="col">
+    <h3>{{resident.residentName }}</h3>
+    <h6>Personal Profile</h6>
+    <a href=""><img src={{resident.imageurl}} height = "250px" width="300px" alt="profile-picture" border="0" /></a>
+</div>
+<div class="col">
+    <b style="color: maroon;">Name :</b>
+    <p>Hi, I'm </p><br>
+    <b style="color: rgb(85, 67, 8);">Apartment :</b>
+    <p>{{resident.apartment.apartmentName }}</p><br>
+    <b style="color : rgb(97, 14, 79);">Mobile : </b>
+    <p>{{resident.mobile  }}</p><br>
+    <b style="color: rgb(37, 65, 19);">loginId : </b>
+    <p>{{resident.loginId}}</p><br>
+    <b style="color: rgb(0, 77, 128);">Gender : </b>
+    <p>{{resident.gender}}</p><br>
+    <button (click)="showEditPopup(resident)" class="glyphicon glyphicon-pencil"></button>
+
+
+    
+    </div>
+</div>
+ </div>
+</body>-->
+
+<body>
+    <div class="container main-secction">
+      <div class="modal fade" id="Model">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" style="text-align: center; color :rgb(0, 77, 128)"><b>Update Form</b></h4>
+                    <span class="close" data-dismiss="modal">&times;</span>
+    
+                </div>
+                <div class="modal-body">
+                    <form class="form-group">
+                        Enter residentName: <input type="text" name="residentName" [(ngModel)]="editObject.residentName"
+                            class="form-control"><br />
+                        Enter gender: <input type="text" name="gender" [(ngModel)]="editObject.gender"
+                            class="form-control"><br />
+                        Enter loginId: <input type="text" name="loginId" [(ngModel)]="editObject.loginId"
+                            class="form-control"><br />
+                        Enter mobile: <input type="text" name="mobile" [(ngModel)]="editObject.mobile"
+                            class="form-control"><br />
+                        Enter imageurl: <input type="text" name="imageurl" [(ngModel)]="editObject.imageurl"
+                            class="form-control"><br />
+                        Enter password: <input type="password" name="password" [(ngModel)]="editObject.password"
+                            class="form-control"><br />
+                        
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn my-4 btn-block" style="color:white; background-color: darkslategrey;" (click)="update()" data-dismiss="modal" text-align="center"><b>Update</b></button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12 image-section">
+                <img src="https://www.gannett-cdn.com/presto/2019/10/11/PNAS/adf1101a-0f8c-404f-9df3-5837bf387dfd-1_Exterior_House_Beautiful_Whole_Home_Concept_House_Castle_Homes_Photo_Reed_Brown_Photography.jpg?crop=5619,3161,x0,y104&width=3200&height=1801&format=pjpg&auto=webp">
+            </div>
+            <div class="row user-left-part">
+                <div class="col-md-3 col-sm-3 col-xs-12 user-profil-part pull-left">
+                        <div class="col">
+                            <img src="{{resident.imageurl}}" height = "300px" width="250px">
+                        </div>
+                        
+                        
+                </div>
+                <div class="col-md-9 col-sm-9 col-xs-12 pull-right profile-right-section">
+                    <div class="row profile-right-section-row">
+                        <div class="col-md-12 profile-header">
+                            <div class="row">
+                                <div class="col-md-8 col-sm-6 col-xs-6 profile-header-section1 pull-left">
+                                    <h1>{{resident.residentName }}</h1>
+                                    <p>Apartment : {{resident.apartment.apartmentName }}</p>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-6 profile-header-section1 text-right pull-rigth">
+                                    <button class="btn btn-info req-btn" (click)="showEditPopup(resident)"> EDIT</button>                          
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-8  profile-tag-section text-center">
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-6 profile-tag">
+                                            <a href="#"><i class="fa fa-calendar-check-o" aria-hidden="true"></i></a>
+                                            <p>Email</p>
+                                            <b>{{resident.email }}</b>
+                                        </div>
+                                        <div class="col-md-3 col-sm-3 profile-tag">
+                                            <a href="#"><i class="fa fa-address-book" aria-hidden="true"></i></a>
+                                            <p>Mobile</p>
+                                            <b>{{resident.mobile }}</b>
+                                        </div>
+                                        <div class="col-md-3 col-sm-3 profile-tag">
+                                            <a href="#"><i class="fa fa-id-card-o" aria-hidden="true"></i></a>
+                                            <p>LoginId</p>
+                                            <b>{{resident.loginId }}</b>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-md-4 img-main-rightPart">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="row image-right-part">
+                                                <div class="col-md-6 pull-left image-right-detail">
+                                                    <p>TODAYHIGHLIGHT</p>
+                                                </div>
+                                                <div class="col-md-6 pull-right image-right-detail text-right">
+                                                    <span><a href="http://nicesnippets.com">more</a></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div  class="col-md-12 image-right">
+                                            <img src="https://www.gannett-cdn.com/presto/2019/10/11/PNAS/adf1101a-0f8c-404f-9df3-5837bf387dfd-1_Exterior_House_Beautiful_Whole_Home_Concept_House_Castle_Homes_Photo_Reed_Brown_Photography.jpg?crop=5619,3161,x0,y104&width=3200&height=1801&format=pjpg&auto=webp">
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

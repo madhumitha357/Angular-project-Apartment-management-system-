@@ -1,0 +1,30 @@
+html,
+body,
+header,
+#intro {
+    height: 100%;
+    
+}
+
+#intro {
+    background: url("https://sothebys-com.brightspotcdn.com/dims4/default/6b55ea3/2147483647/strip/true/crop/640x423+0+0/resize/684x452!/quality/90/?url=http%3A%2F%2Fsothebys-brightspot-migration.s3.amazonaws.com%2F77%2Fd7%2F29%2Faa8577f8af02307ccee0657e11921455d15ae365616cdb8059d650b923%2Feditorial1a.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height:800px;
+}
+
+.top-nav-collapse {
+    background-color: #24355C;
+  }
+  @media (max-width: 768px) {
+    .navbar:not(.top-nav-collapse) {
+      background-color: #24355C;
+    }
+  }
+  @media (min-width: 800px) and (max-width: 850px) {
+    .navbar:not(.top-nav-collapse) {
+      background-color: #24355C;
+    }
+  }

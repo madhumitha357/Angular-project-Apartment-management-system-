@@ -1,0 +1,95 @@
+<!--add this code in registration.component.html-->
+<app-header></app-header>
+
+<body>
+
+    <div class="container">
+        <div class="frame">
+        
+            
+    <form class="text-center border border-light p-5" action="#!" #registerForm="ngForm" (ngSubmit)="register(registerForm.value)" novalidate>
+    
+        <p class="h4 mb-4 " style="color:floralwhite">Register</p>
+    
+                <!-- First name -->
+        <!--<div class="form-group" [ngClass]="{'has-error' : registerForm.get('residentId').errors }">-->
+        <input type="number"  name="residentId" [(ngModel)]='resident.residentId' #residentId="ngModel" id="defaultRegisterFormFirstName" required
+        maxlength=10 minlength=4  class="form-control mb-4" placeholder="Enter Residentid">
+        <div [hidden]="residentId.valid || residentId.pristine"
+        class="alert alert-danger">
+            RegisterId is required
+        </div>
+            
+                <!-- Last name -->
+        <input type="text" name="residentName" [(ngModel)]='resident.residentName' #residentName="ngModel" id="defaultRegisterFormLastName" required
+        maxlength=10 minlength=4  class="form-control mb-4" placeholder="Enter name">
+        <div [hidden]="residentName.valid || residentName.pristine"
+        class="alert alert-danger">
+            Register Name is required
+        </div>
+            
+        <!-- E-mail -->
+        <input type="text"  name="gender" [(ngModel)]='resident.gender' #gender="ngModel" id="defaultRegisterFormEmail" required
+        maxlength=6 minlength=1   class="form-control mb-4" placeholder="Gender">
+        <div [hidden]="gender.valid || gender.pristine"
+        class="alert alert-danger">
+        Gender is required
+        </div>
+    
+        <!-- Password -->
+        <input type="text" name="mobile" [(ngModel)]='resident.mobile' #mobile="ngModel" id="defaultRegisterFormPassword" required
+        maxlength=10 minlength=10 class="form-control mb-4" placeholder="Mobile" aria-describedby="defaultRegisterFormPasswordHelpBlock">
+        <div [hidden]="mobile.valid || mobile.pristine"
+        class="alert alert-danger">
+        Mobile is required
+        </div>
+        
+        <select type ="number" name="apartment" class="form-control" placeholder="Apartment" [(ngModel)]='resident.apartment.apartmentId'><br/>
+            <option value="" selected disabled>Please select apartment</option>  
+            <option [ngValue]="apartment.apartmentId" *ngFor="let apartment of apartments">{{apartment.apartmentName}}</option>
+        </select><br/>
+        <!--<div [hidden]="residentName.valid || residentId.pristine"
+        class="alert alert-danger">
+            RegisterId is required
+        </div>-->
+    
+        <input type="text" name="loginId" [(ngModel)]='resident.loginId' id="defaultRegisterFormPassword" #loginId="ngModel" required
+        maxlength=10 minlength=4 class="form-control mb-4" placeholder="LoginId" aria-describedby="defaultRegisterFormPasswordHelpBlock">
+        <div [hidden]="loginId.valid || loginId.pristine"
+        class="alert alert-danger">
+        loginId is required
+        </div>
+    
+        <input type="text" name="password" [(ngModel)]='resident.password' id="defaultRegisterFormPassword" #password="ngModel" required
+        maxlength=10 minlength=8 class="form-control mb-4" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
+        <div [hidden]="password.valid || password.pristine"
+        class="alert alert-danger">
+        password is required
+        </div>
+    
+        
+    
+        <!-- Sign up button -->
+        <button class="btn btn-success my-4 btn-block" [disabled]="!registerForm.valid"  type="submit" >Register</button>
+    
+        
+    
+        <!-- Terms of service -->
+        <p style="color: floralwhite;">By clicking
+            <em>Sign up</em> you agree to our
+            <a href="" target="_blank">terms of service</a>
+    
+    </form>
+    </div>
+    </div>
+    
+    </body>
+    <div class="text-danger">
+        <div *ngIf="registerForm.touched && residentId.errors?.required">Please enter residentId id</div>
+        <div *ngIf="registerForm.touched && residentName.errors?.required">Please resident name password</div>
+        <div *ngIf="registerForm.touched && gender.errors?.required">Please enter gender</div>
+        <div *ngIf="registerForm.touched && mobile.errors?.required">Please enter mobile</div>
+        <div *ngIf="registerForm.touched && gender.errors?.required">Please enter LoginId</div>
+        <div *ngIf="registerForm.touched && mobile.errors?.required">Please enter password between 8-10 characters</div>
+        
+    </div>

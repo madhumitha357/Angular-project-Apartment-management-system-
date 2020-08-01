@@ -1,0 +1,71 @@
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+</head>
+<!--
+<div class="container">
+    <div class="modal fade" id="empModel">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close" data-dismiss="modal">&times;</span>
+                    <h4 class="modal-title">Update Form</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-group">
+                        Enter Id: <input type="number" name="empId" [(ngModel)]="editObject.empId"
+                            class="form-control"><br />
+                        Enter Name: <input type="text" name="empName" [(ngModel)]="editObject.empName"
+                            class="form-control"><br />
+                        Enter Salary: <input type="number" name="salary" [(ngModel)]="editObject.salary"
+                            class="form-control"><br />
+                        Enter Gender: <input type="text" name="gender" [(ngModel)]="editObject.gender"
+                            class="form-control"><br />
+                        Enter Date of join: <input type="date" name="doj" [(ngModel)]="editObject.doj"
+                            class="form-control"><br />
+                        Enter Mobile: <input type="text" name="mobile" [(ngModel)]="editObject.mobile"
+                            class="form-control"><br />
+                        Enter Country: <input type="text" name="country" [(ngModel)]="editObject.country"
+                            class="form-control"><br />
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary btn-sm" (click)="updateEmp()" data-dismiss="modal">Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+-->
+<div class="container">
+
+    <table class="table table-bordered table-striped table-hover table-sm text-center">
+        <thead>
+            <tr class="bg-info text-white">
+                <th>ID</th>
+                <th>NAME</th>
+                <th>GENDER</th>
+                
+                <th>MOBILE</th>
+                <th>LOGINID</th>
+                <th>APARTMENTID</th>
+
+                <th>DELETE</th>
+                <th>EDIT</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let resident of residents'>
+                <td>{{resident.residentId}}</td>
+                <td>{{resident.residentName}}</td>
+                <td>{{resident.gender}}</td>
+                <td>{{resident.mobile }}</td>
+                <td>{{resident.loginId}}</td>
+                <td>{{resident.apartment.apartmentId}}</td>
+
+                <td><button class="glyphicon glyphicon-trash"></button></td>
+                <td><button  class="glyphicon glyphicon-pencil"></button></td>
+           </tr>
+</tbody>
+</table>
+</div>

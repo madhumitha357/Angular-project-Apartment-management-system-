@@ -1,0 +1,28 @@
+body * {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif
+}
+
+body {
+    background: url(https://image.freepik.com/free-vector/futuristic-flying-electronic-envelope-email-dark-gradient-blue-purple_67515-472.jpg) no-repeat center center fixed;
+    background-size: cover
+}
+
+.container {
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 330px
+}
+.frame {
+    height: 403px;
+    width: 430px;
+    background: linear-gradient(rgba(14, 4, 58, 0.404), rgba(12, 11, 10, 0.95)) no-repeat center center;
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
+    border-top: solid 1px rgba(255, 255, 255, .5);
+
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all .5s ease
+}

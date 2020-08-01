@@ -1,0 +1,6 @@
+#tableWithBgImage {
+    background-repeat: no-repeat;
+    background: linear-gradient(rgba(231, 193, 228, 0.75), rgba(240, 180, 222, 0.95)), url() no-repeat center center;
+height : 500px;
+    width: 1000px;
+}

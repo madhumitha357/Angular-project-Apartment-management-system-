@@ -1,0 +1,28 @@
+body * {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif
+}
+
+body {
+    background: url(https://c4.wallpaperflare.com/wallpaper/724/723/644/interior-design-room-house-home-apartment-condo-209-desktop-background-images-wallpaper-preview.jpg) no-repeat center center fixed;
+    background-size: cover
+}
+
+.container {
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 200px
+}
+.frame {
+    height: 595px;
+    width: 430px;
+    background: linear-gradient(rgba(221, 123, 10, 0.404), rgba(233, 171, 56, 0.95)) no-repeat center center;
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
+    border-top: solid 1px rgba(255, 255, 255, .5);
+    border-radius: 5px;
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: all .5s ease
+}

@@ -1,0 +1,63 @@
+<table class="body-wrap">
+    <tbody><tr>
+        <td></td>
+        <td class="container" width="600">
+            <div class="content">
+                <table class="main" width="100%" cellpadding="0" cellspacing="0">
+                    <tbody><tr>
+                        <td class="content-wrap aligncenter">
+                            <table width="100%" cellpadding="0" cellspacing="0">
+                                <tbody><tr>
+                                    <td class="content-block">
+                                        <h2>Thanks for using our app</h2>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="content-block">
+                                        <table class="invoice">
+                                            <tbody><tr>
+                                                <td>{{binvoice.resident.residentName}}<br>Invoice #12345<br>{{binvoice.date |date: 'dd-MMMM-yy hh:mm:ss'}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <table class="invoice-items" cellpadding="0" cellspacing="0">
+                                                        <tbody><tr>
+                                                            <td>{{binvoice.amenity.amenityName}}</td>
+                                                            <td class="alignright">Rs {{binvoice.amenity.charge}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Timings</td>
+                                                            <td class="alignright">{{binvoice.slot.slotName}}</td>
+                                                        </tr>
+                                                        
+                                                        <tr class="total">
+                                                            <td class="alignright" width="80%">Total</td>
+                                                            <td class="alignright">Rs {{binvoice.amenity.charge}}</td>
+                                                        </tr>
+                                                    </tbody></table>
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="content-block">
+                                        <a href="#">View in browser</a>
+                                    </td>
+                                </tr>
+                                
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody></table>
+                <div class="footer">
+                    <table width="100%">
+                        <tbody><tr>
+                            <td class="aligncenter content-block">Questions? Email <a href="mailto:">support@company.inc</a></td>
+                        </tr>
+                    </tbody></table>
+                </div></div>
+        </td>
+        <td></td>
+    </tr>
+</tbody></table>
